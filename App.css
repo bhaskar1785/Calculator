@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+* {
+  font-family: "Orbitron", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #252525;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+}
+
+.calculator {
+  background: rgb(37, 37, 37);
+  padding: 20px;
+  border-radius: 20px;
+  height: 380px;
+  border: 5px solid rgb(59, 59, 59);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.9) 0px 10px 0px 10px;
+  max-width: 360px;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.calculator input {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: right;
+  background: #636b62;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 4px solid rgb(66, 66, 66);
+  color: black;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  width: 100%;
+}
+
+button {
+  padding: 12px 0;
+  color: #ffffff;
+  border: 3px solid black;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 150ms ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+  border-radius: 10px;
+  background-color: #111111;
+  background-image: radial-gradient(76% 151% at 52% -52%, rgba(255, 255, 255, 0.23) 0%, transparent 100%);
+  width: 100%;
+  min-width: 0;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+  .calculator {
+    padding: 10px;
+    border-radius: 12px;
+    height: auto;
+    max-width: 98vw;
+  }
+
+  .calculator input {
+    font-size: 18px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+}
+
+body {
+  --dot-bg: rgb(255, 255, 255);
+  --dot-color: rgb(0, 0, 0);
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+.btn {
+  background-color: #ffffff;
+  width: 80px;
+  border: none;
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  margin: 5px;
+
+}
+
+.btn:nth-child(3) {
+  background-color: #252525;
+  color: white;
+}
+
+.btnBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btnBox h1 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
